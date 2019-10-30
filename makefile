@@ -25,3 +25,6 @@ shell:
 
 build:
 	docker-compose build django
+
+logs:
+	docker-compose logs django
