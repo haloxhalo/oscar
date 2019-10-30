@@ -6,6 +6,5 @@ from .models import Scan
 class AddScanView(CreateView):
     model = Scan
 
+
 add_scan_view = AddScanView.as_view()
-
-

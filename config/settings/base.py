@@ -4,9 +4,7 @@ Base settings to build other settings files upon.
 
 import environ
 
-ROOT_DIR = (
-    environ.Path(__file__) - 3
-)  # (oscar/config/settings/base.py - 3 = oscar/)
+ROOT_DIR = environ.Path(__file__) - 3  # (oscar/config/settings/base.py - 3 = oscar/)
 APPS_DIR = ROOT_DIR.path("oscar")
 
 env = environ.Env()
@@ -75,6 +73,7 @@ THIRD_PARTY_APPS = [
 LOCAL_APPS = [
     "oscar.users.apps.UsersConfig",
     # Your stuff: custom apps go here
+    "oscar.products.apps.ProductsConfig",
     "oscar.scans.apps.ScansConfig",
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
