@@ -1,3 +1,10 @@
 from django.contrib import admin
+from .models import RecyclingCenter
 
-# Register your models here.
+
+class RecyclingCenterAdmin(admin.ModelAdmin):
+    fields = ['data']
+
+
+admin.site.register(RecyclingCenter, RecyclingCenterAdmin)
+
