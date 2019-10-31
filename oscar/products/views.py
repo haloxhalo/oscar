@@ -6,6 +6,7 @@ from .models import Company, SKU
 class DetailCompanyView(DetailView):
     model = Company
     fields = ['data']
+#    pk_url_kwarg = "pk"
 
 
 class ListCompanyView(ListView):
@@ -16,6 +17,7 @@ class ListCompanyView(ListView):
 class DetailSKUView(DetailView):
     model = SKU
     fields = ['data','company']
+    
 
 
 class ListSKUView(ListView):
