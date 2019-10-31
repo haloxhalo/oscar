@@ -1,6 +1,12 @@
 {% load crispy_forms_tags %}
 <html>
-  <body>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+@media all and (max-device-width: 400px) {
+	// styles for screens with a maximum width of 400px
+	}
+</style>
+<body>
     <form class="form-horizontal" method="post" action="#">
     {% csrf_token %}
     <div id="div_id_code" class="form-group">
