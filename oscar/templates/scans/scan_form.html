@@ -1,0 +1,28 @@
+{% load crispy_forms_tags %}
+<html>
+  <body>
+    <form class="form-horizontal" method="post" action="#">
+    {% csrf_token %}
+    <div id="div_id_code" class="form-group">
+      <label for="id_code" class=" requiredField">Code<span class="asteriskField">*</span></label>
+      <div class=""><input type="text" name="code" placeholder="12345678901234" autofocus="autofocus" maxlength="150" class="textinput textInput form-control" required="" id="id_code"></div>
+    </div>
+    </form>
+    <div class="control-group">
+      <div class="controls">
+        <button type="submit" class="btn">Update</button>
+      </div>
+    </div>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+      $().ready(() => {
+        $('.form-horizontal').submit((e) => {
+          code = $('#id_code').val()
+          $.post('', {'data': {'code': code}})
+        }
+      });
+    </script>
+  </body>
+</html>
