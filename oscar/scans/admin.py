@@ -1,3 +1,10 @@
 from django.contrib import admin
+from .models import Scan
 
-# Register your models here.
+
+class ScansAdmin(admin.ModelAdmin):
+    fields = ['data']
+
+
+admin.site.register(Scan, ScansAdmin)
+
